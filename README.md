@@ -6,7 +6,7 @@
 [![Status: Planning](https://img.shields.io/badge/status-planejamento-orange.svg)](#estado-do-projeto)
 [![Community](https://img.shields.io/badge/comunidade-Java_Open_Source_Collective-darkgreen.svg)](https://github.com/java-osc)
 
-Um e-commerce de código aberto construído em comunidade, com escopo definido e uma evolução planejada: **do monólito modular aos microsserviços**.
+Um e-commerce de código aberto construído em comunidade, com escopo definido e arquitetura de **monólito modular**.
 
 Este é o primeiro projeto da **Java Open Source Collective**, uma iniciativa **100% sem fins lucrativos**, gratuita e baseada em colaboração voluntária. Nosso objetivo é criar software útil e um ambiente onde desenvolvedores possam aprender, experimentar e compartilhar experiência.
 
@@ -51,7 +51,7 @@ O roadmap abaixo representa o plano de trabalho, **não funcionalidades já impl
 - Exercitar mentoria, liderança técnica e revisão de código.
 - Discutir arquitetura e registrar decisões e seus trade-offs.
 - Experimentar Java e Spring modernos em um produto compartilhado.
-- Praticar migração incremental, mensageria e operação de sistemas distribuídos.
+- Praticar modularidade, testes, integração entre domínios e operação da aplicação.
 - Aprender com outras perspectivas e contribuir para software livre.
 
 A comunidade não é uma vaga de trabalho ou um curso com aulas obrigatórias. **Não há promessa de emprego, remuneração ou certificação.** O aprendizado acontece através da colaboração.
@@ -81,7 +81,7 @@ Um e-commerce pensado inicialmente para **Brasil e Portugal**, com **uma loja po
 - Integrações reais com pagamentos e transportadoras.
 - Faturação fiscal e regras tributárias específicas de cada país.
 
-Pagamentos e frete terão contratos próprios e implementações simuladas. Integrações reais poderão ser discutidas depois das duas fases iniciais.
+Pagamentos e frete terão contratos próprios e implementações simuladas. Integrações reais ficam fora do escopo deste projeto.
 
 ## Stack e arquitetura
 
@@ -89,30 +89,22 @@ Pagamentos e frete terão contratos próprios e implementações simuladas. Inte
 | --- | --- |
 | Backend | Java 25 e Spring Boot 4 |
 | Modularidade | Spring Modulith |
-| Fase 1 | Monólito modular por domínio |
-| Fase 2 | Extração incremental de microsserviços e mensageria |
+| Arquitetura | Monólito modular por domínio |
 | API | REST |
 | Infraestrutura | VPS disponível para hospedagem |
 | Ambiente e entrega | Docker e CI/CD no planejamento |
 | Frontend | A definir |
 | Banco de dados | A definir |
-| Broker de mensagens | A definir |
 
 As versões exatas, dependências e configurações serão registradas no início da implementação.
 
-### Fase 1 — monólito modular
+### Monólito modular
 
-Entregar uma aplicação funcional com limites claros entre os domínios. Trabalhar modularidade, transações, segurança, testes e comunicação entre módulos antes de introduzir distribuição.
-
-### Fase 2 — microsserviços e eventos
-
-Evoluir o mesmo produto mantendo o fluxo de compra. Extrair gradualmente notificações, pagamentos e estoque; estudar contratos, autonomia de dados, idempotência, retries e compensações.
-
-Não existe compromisso de transformar todo módulo em um serviço. Cada extração deve ter uma justificativa documentada. Catálogo e pedidos podem permanecer juntos inicialmente.
+Entregar uma aplicação funcional com limites claros entre os domínios. Trabalhar modularidade, transações, segurança, testes e comunicação entre módulos com Java 25, Spring Boot 4 e Spring Modulith.
 
 ## Roadmap
 
-**11 sprints: 5 na fase 1 e 6 na fase 2.** A cadência proposta é de duas semanas por sprint, com capacidade ajustada à disponibilidade dos participantes.
+**5 sprints de desenvolvimento.** A cadência proposta é de duas semanas por sprint, com capacidade ajustada à disponibilidade dos participantes.
 
 | Sprint | Foco | Entrega planejada |
 | --- | --- | --- |
@@ -121,12 +113,6 @@ Não existe compromisso de transformar todo módulo em um serviço. Cada extraç
 | 3 | Carrinho e checkout | Carrinho, endereço e criação de pedido |
 | 4 | Pagamentos e pedidos | Pagamento simulado, reserva de estoque e transições do pedido |
 | 5 | Release do monólito | Notificações, testes dos fluxos principais e documentação |
-| 6 | Preparação da migração | Contratos, broker, observabilidade e plano de extração |
-| 7 | Notificações | Serviço independente com consumo de eventos e tratamento de falhas |
-| 8 | Pagamentos | Serviço de pagamentos simulados com idempotência |
-| 9 | Estoque | Serviço de reservas e liberação de estoque |
-| 10 | Checkout distribuído | Coordenação do fluxo e compensações |
-| 11 | Release distribuída | Testes de falhas, deploy automatizado e documentação operacional |
 
 Antes da sprint 1, haverá preparação de ambiente, onboarding e orientação para a primeira contribuição. A sequência é um plano inicial e poderá ser refinada conforme o aprendizado e a capacidade real da equipe.
 
