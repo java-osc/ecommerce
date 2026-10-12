@@ -87,16 +87,18 @@ Pagamentos e frete terão contratos próprios e implementações simuladas. Inte
 
 | Área | Direção |
 | --- | --- |
-| Backend | Java 25 e Spring Boot 4 |
-| Modularidade | Spring Modulith |
+| Linguagem | Java 25 |
+| Framework | Spring Boot 4.1.1 |
+| Modularidade | Spring Modulith 2.1.1 |
 | Arquitetura | Monólito modular por domínio |
 | API | REST |
+| Build | Maven |
+| Banco de dados | PostgreSQL |
+| Frontend | Angular 22 |
 | Infraestrutura | VPS disponível para hospedagem |
 | Ambiente e entrega | Docker e CI/CD no planejamento |
-| Frontend | A definir |
-| Banco de dados | A definir |
 
-As versões exatas, dependências e configurações serão registradas no início da implementação.
+Estas são as versões e tecnologias escolhidas para a implementação inicial. As dependências serão fixadas na configuração Maven do projeto.
 
 ### Monólito modular
 
@@ -170,12 +172,13 @@ Revisamos o código com respeito. O reviewer explica o motivo e o impacto; o aut
 
 **Não é necessário ter experiência profissional para começar.**
 
-1. Leia o escopo, o roadmap e o estado atual do projeto.
-2. Consulte as [issues](https://github.com/java-osc/ecommerce/issues) existentes.
-3. Comente na tarefa em que deseja trabalhar e alinhe o escopo antes de implementar.
-4. Se ainda não houver uma tarefa adequada, abra uma issue apresentando sua ideia, dúvida ou interesse em participar.
-5. Quando a implementação começar, use um fork e uma branch para sua contribuição.
-6. Abra um pull request explicando a mudança e participe do review.
+1. Escolha uma [issue](https://github.com/java-osc/ecommerce/issues) adequada ao seu interesse.
+2. Comente nela e alinhe o escopo com as pessoas responsáveis antes de começar.
+3. Crie um fork do repositório e uma branch para a mudança.
+4. Implemente e verifique a contribuição; mantenha as mudanças pequenas e focadas.
+5. Abra um pull request explicando a mudança e como ela foi verificada.
+6. Participe do review, responda aos comentários e faça os ajustes necessários.
+7. Depois da aprovação, a mudança é integrada ao projeto pelo merge do PR.
 
 Não precisa começar com uma funcionalidade grande. Documentação, reprodução de problemas, testes e pequenas melhorias também são contribuições importantes.
 
@@ -192,9 +195,9 @@ Contribuições de pessoas experientes devem facilitar a participação de outra
 
 ## Ambiente local
 
-Ainda não há código de aplicação para executar.
+Ainda não há código de aplicação ou configuração Maven para executar. Os comandos de execução e testes serão adicionados assim que a base executável estiver disponível; não são necessários credenciais de produção ou acesso à VPS para começar a contribuir.
 
-Quando a base técnica estiver disponível, esta seção incluirá pré-requisitos, comandos de build e testes, configuração local e execução com Docker. Não são necessários credenciais de produção ou acesso à VPS para começar a contribuir.
+Quando a base técnica estiver disponível, esta seção incluirá pré-requisitos, configuração local e execução com Docker.
 
 ## Convivência e manutenção
 
